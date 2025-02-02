@@ -3,13 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import MovieCard from './components/MovieCard'
+import Home from "./pages/Home"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <MovieCard movie={{title: "Tims Film", release_date: "2024"}}/>
+   <Home />
     </>
 
   );
