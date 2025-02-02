@@ -7,13 +7,23 @@ function Home() {
         {id:3, title:"Matrix", release_date: "1998"},
         {id:4, title:"Mission Impossible", release_date: "1991"}
 
-    ]
+    ];
 
-    return <div className="home">
+    const handleSearch = () => {};
+
+    return (<div className="home">
+        <form onSubmit={handleSearch} className="search-form">
+            <input type="text" placeholder="Search for Movie....." className="search-input" />
+            <button type="submit"  className="search-button" >Search</button>
+        </form>
+        
         <div className="movies-grid">
-            {movies.map((movie) => (<MovieCard movie={movie} key={movie.id} />))}
+            {movies.map((movie) => (
+                <MovieCard movie={movie} key={movie.id} />
+                ))}
         </div>
     </div>
+    );
 
 }
 
